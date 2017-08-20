@@ -2,7 +2,7 @@ from flask import Flask
 from redis import Redis
 
 app = Flask(__name__)
-redis = Redis(host='10.92.2.4', port=6379)
+redis = Redis(host='0.0.0.0', port=6379)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
